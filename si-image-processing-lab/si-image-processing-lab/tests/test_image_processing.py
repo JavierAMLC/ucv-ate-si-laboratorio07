@@ -1,0 +1,18 @@
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
+
+from si_image_processing_lab.pipelines.image_processing.nodes import (
+    process_image,
+)
+
+
+def test_process_image():
+    result = process_image(
+        "data/01_raw/marte.jpg",
+        "data/03_primary/test_output.jpg"
+    )
+
+    assert result is not None
+    
