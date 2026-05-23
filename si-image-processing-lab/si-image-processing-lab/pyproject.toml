@@ -1,0 +1,44 @@
+[build-system]
+requires = [
+    "setuptools",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.10"
+name = "si_image_processing_lab"
+version = "0.1.0"
+readme = "README.md"
+
+dependencies = [
+    "ipython>=8.10",
+    "jupyterlab>=3.0",
+    "notebook",
+    "kedro~=1.4.0",
+    "pillow (>=12.2.0,<13.0.0)",
+    "kedro-datasets (>=9.3.0,<10.0.0)",
+]
+
+[project.scripts]
+si-image-processing-lab = "si_image_processing_lab.__main__:main"
+
+[project.entry-points."kedro.hooks"]
+
+
+
+[tool.setuptools.packages.find]
+where = [
+    "src",
+]
+namespaces = false
+
+[tool.kedro]
+package_name = "si_image_processing_lab"
+project_name = "si-image-processing-lab"
+kedro_init_version = "1.4.0"
+tools = "['None']"
+example_pipeline = "False"
+source_dir = "src"
+
+[tool.kedro_telemetry]
+project_id = "8fe9dbeb2ec04337a8369621ae1cb1ff"
