@@ -23,8 +23,8 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install Poetry and Ruff
-        run: pip install poetry ruff
+      - name: Install Poetry, Ruff, and Pytest
+        run: pip install poetry ruff pytest
 
       - name: Install dependencies
         working-directory: ./si-image-processing-lab/si-image-processing-lab
@@ -36,4 +36,4 @@ jobs:
 
       - name: Run Tests
         working-directory: ./si-image-processing-lab/si-image-processing-lab
-        run: poetry run pytest
+        run: pytest
