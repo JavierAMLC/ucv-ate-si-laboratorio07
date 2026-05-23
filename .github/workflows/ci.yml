@@ -13,6 +13,10 @@ on:
 jobs:
   quality-check:
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./si-image-processing-lab
 
     steps:
       - uses: actions/checkout@v4
