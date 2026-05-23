@@ -27,13 +27,13 @@ jobs:
         run: pip install poetry
 
       - name: Install dependencies
-        working-directory: ./si-image-processing-lab
+        working-directory: ./si-image-processing-lab/si-image-processing-lab
         run: poetry install --no-root
 
       - name: Run Ruff
-        working-directory: ./si-image-processing-lab
+        working-directory: ./si-image-processing-lab/si-image-processing-lab
         run: poetry run ruff check .
 
       - name: Run Tests
-        working-directory: ./si-image-processing-lab
+        working-directory: ./si-image-processing-lab/si-image-processing-lab
         run: poetry run pytest
